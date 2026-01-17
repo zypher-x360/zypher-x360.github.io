@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Zypher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      letter-spacing: 2px;
+    }
+
+    .warning {
+      margin-top: 30px;
+      max-width: 600px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background-color: #b0b0b0;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .mediafire {
+      background-color: #0a1e3f;
+    }
+
+    .spacer {
+      height: 400px;
+    }
+
+    .copyright {
+      font-size: 11px;
+      opacity: 0.35;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>ZYPHER</h1>
+
+  <div class="warning">
+    <strong>⚠️ ATENCIÓN ⚠️</strong><br><br>
+    Este link te mandará a mi canal de youtube
+    una vez que te suscribas, regresa y el link
+    directo de MEDIAFIRE estará listo
+  </div>
+
+  <!-- BOTÓN YOUTUBE -->
+  <a
+    id="youtubeBtn"
+    class="button"
+    href="https://youtube.com/@zypherx360?sub_confirmation=1"
+    target="_blank"
+    onclick="unlockDownload()"
+  >
+    Canal de YouTube
+  </a>
+
+  <!-- BOTÓN MEDIAFIRE -->
+  <a
+    id="downloadBtn"
+    class="button mediafire hidden"
+    href="https://www.mediafire.com/file/7r15m5hrbjjt9w5/la_pesadilla_del_chavo.zip/file"
+    target="_blank"
+  >
+    MEDIAFIRE
+  </a>
+
+  <div class="spacer"></div>
+
+  <!-- COPYRIGHT INVISIBLE -->
+  <div
+    class="copyright"
+    onclick="window.open('https://www.mediafire.com/file/7r15m5hrbjjt9w5/la_pesadilla_del_chavo.zip/file','_blank')"
+  >
+    © 2026 Zypher. All rights reserved.
+  </div>
+
+  <script>
+    function unlockDownload() {
+      setTimeout(() => {
+        document.getElementById("youtubeBtn").classList.add("hidden");
+        document.getElementById("downloadBtn").classList.remove("hidden");
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
